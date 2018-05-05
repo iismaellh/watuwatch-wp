@@ -1,0 +1,116 @@
+[data-doughnut] {
+  width: 175px;
+  height: 175px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #2A2A2A;
+  margin: 0 auto;
+  float: none;
+  display: block;
+}
+
+[data-doughnut]:before, [data-doughnut]:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+[data-doughnut]:before {
+  top: 15%;
+  bottom: 15%;
+  left: 15%;
+  right: 15%;
+  background: transparent;
+}
+
+[data-doughnut]::after {
+  top: 13%;
+  bottom: 13%;
+  left: 13%;
+  right: 13%;
+  background: #191919;
+}
+
+[data-doughnut] > div {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  left: 50%;
+  -webkit-transform-origin: left center;
+  -khtml-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+[data-doughnut] > div .before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -99%;
+  -webkit-transform-origin: right center;
+  -khtml-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  -o-transform-origin: right center;
+  transform-origin: right center;
+}
+
+[data-doughnut] > div.big {
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  -webkit-transform-origin: center;
+  -khtml-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+}
+
+[data-doughnut] > div.big .before {
+  left: 0;
+  width: 50%;
+}
+
+[data-doughnut] > div.big:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+}
+
+[data-doughnut] > div:nth-child(1) .before, [data-doughnut] > div:nth-child(1):after {
+  background: #75778B;
+}
+
+[data-doughnut] > div:nth-child(2) .before, [data-doughnut] > div:nth-child(2):after {
+  background: #75778B;
+}
+
+[data-doughnut] h5 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -75%, 0);
+  color: #75778B;
+  font-size: 1em;
+  z-index: 1000;
+  text-align: center;
+}
+
+[data-doughnut] .score {
+  color: #1BBEFE;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Open Sans', serif;
+  margin: 5px 0;
+  display: block;
+}
